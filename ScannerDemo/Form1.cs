@@ -96,15 +96,23 @@ namespace ScannerDemo
                 switch (comboBox1.SelectedIndex)
                 {
                     case 0:
-                        image = device.ScanPNG();
+                        image = device.ScanImage(WIA.FormatID.wiaFormatPNG);
                         imageExtension = ".png";
                         break;
                     case 1:
-                        image = device.ScanJPEG();
+                        image = device.ScanImage(WIA.FormatID.wiaFormatJPEG);
                         imageExtension = ".jpeg";
                         break;
                     case 2:
-                        image = device.ScanTIFF();
+                        image = device.ScanImage(WIA.FormatID.wiaFormatBMP);
+                        imageExtension = ".bmp";
+                        break;
+                    case 3:
+                        image = device.ScanImage(WIA.FormatID.wiaFormatGIF);
+                        imageExtension = ".gif";
+                        break;
+                    case 4:
+                        image = device.ScanImage(WIA.FormatID.wiaFormatTIFF);
                         imageExtension = ".tiff";
                         break;
                 }
