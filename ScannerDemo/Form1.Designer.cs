@@ -83,6 +83,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "PNG",
             "JPEG",
+            "BMP",
+            "GIF",
             "TIFF"});
             this.comboBox1.Location = new System.Drawing.Point(9, 307);
             this.comboBox1.Name = "comboBox1";
